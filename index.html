@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>માર્ચી તોડવાનું કામ ટ્રેકર</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏗️ માર્ચી તોડવાનું કામ ટ્રેકર</h1>
+            <p class="subtitle">આટોમેટિક વેતન ગણતરી સિસ્ટમ</p>
+        </header>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <h3>કુલ કામદાર</h3>
+                <p id="totalWorkers">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>કુલ માર્ચી (kg)</h3>
+                <p id="totalStones">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>કુલ ચુકવવાનું રૂપિયા</h3>
+                <p id="totalPayment">₹0</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>નવો કામદાર ઉમેરો</h2>
+            <form id="workerForm">
+                <div class="form-group">
+                    <label for="workerName">કામદારનું નામ:</label>
+                    <input type="text" id="workerName" required placeholder="જેમ કે રમેશભાઈ">
+                </div>
+                <div class="form-group">
+                    <label for="stonesBroken">તોડેલી માર્ચી (kg માં):</label>
+                    <input type="number" id="stonesBroken" required min="0" step="0.1" placeholder="જેમ કે 25.5">
+                </div>
+                <button type="submit">ઉમેરો</button>
+            </form>
+        </div>
+
+        <div class="workers-section">
+            <h2>કામદારોની યાદી</h2>
+            <div id="workersList">
+                <p class="no-workers">હજુ સુધી કોઈ કામદાર ઉમેરાયો નથી</p>
+            </div>
+        </div>
+
+        <div class="payment-section">
+            <h2>આજનું વેતન ચાર્ટ</h2>
+            <table id="paymentTable">
+                <thead>
+                    <tr>
+                        <th>ક્રમાંક</th>
+                        <th>કામદારનું નામ</th>
+                        <th>તોડેલી માર્ચી (kg)</th>
+                        <th>વેતન (₹5/kg)</th>
+                        <th>ક્રિયા</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
